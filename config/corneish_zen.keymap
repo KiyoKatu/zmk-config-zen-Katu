@@ -34,7 +34,9 @@
 			global-quick-tap;
 			bindings = <&kp>, <&kp>;
 		};
-		ZMK_MACRO(maccut,
+		ZMK_MACRO(mac_cut,
+			wait-ms = <30>;
+			tap-ms = <40>;
 			bindings
 			= <&macro_press &kp LCTRL>
 			, <&macro_tap &kp X>
@@ -57,7 +59,7 @@
                         bindings = <
    &kp TAB   		&kp Q 			&kp W 			&kp F 			&kp P 			&kp G  			&kp J 			&kp L  		&kp U     	&kp Y   	&kp SEMI   	&kp ESC
    &bsdl			&kp A 			&kp R 			&kp S 			&kp T 			&kp D   		&kp H 			&kp N  		&kp E     	&kp I   	&kp O 		&kp SQT
-   &mt LSHFT CAPS 	&kp Z 			&gqt &maccut X	&gqt K_COPY	C	&gqt K_PASTE V	&kp B   		&kp K 			&kp M  		&kp COMMA 	&kp DOT 	&kp FSLH 	&mt RSHFT CAPS
+   &mt LSHFT CAPS 	&kp Z 			&gqt &mac_cut X	&gqt K_COPY	C	&gqt K_PASTE V	&kp B   		&kp K 			&kp M  		&kp COMMA 	&kp DOT 	&kp FSLH 	&mt RSHFT CAPS
 													&kp LGUI 		&mo 2 			&kp RET   		&kp SPACE 		&mo 3 		&kp LCTRL
                         >;
                 };
