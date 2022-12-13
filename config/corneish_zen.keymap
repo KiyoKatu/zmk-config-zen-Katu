@@ -24,7 +24,17 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
 			keep-mods = <(MOD_RSFT)>;
         };
-    };
+		gqt: global-quick-tap {
+			compatible = "zmk,behavior-hold-tap";
+			label = "GLOBAL_QUICK_TAP";
+			#binding-cells = <2>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <200>;
+			quick-tap-ms = <125>;
+			global-quick-tap;
+			bindings = <&kp>, <&kp>;
+		};
+	};
 };
 
 / {
@@ -41,7 +51,7 @@
                         bindings = <
    &kp TAB   		&kp Q 			&kp W 			&kp F 			&kp P 			&kp G  			&kp J 			&kp L  		&kp U     	&kp Y   	&kp SEMI   	&kp ESC
    &bsdl			&kp A 			&kp R 			&kp S 			&kp T 			&kp D   		&kp H 			&kp N  		&kp E     	&kp I   	&kp O 		&kp SQT
-   &mt LSHFT CAPS 	&kp Z 			&kp X 			&kp C 			&kp V 			&kp B   		&kp K 			&kp M  		&kp COMMA 	&kp DOT 	&kp FSLH 	&mt RSHFT CAPS
+   &mt LSHFT CAPS 	&kp Z 			&gqt K_CUT X	&gqt K_COPY	C	&gqt K_PASTE V	&kp B   		&kp K 			&kp M  		&kp COMMA 	&kp DOT 	&kp FSLH 	&mt RSHFT CAPS
 													&kp LGUI 		&mo 2 			&kp RET   		&kp SPACE 		&mo 3 		&kp LCTRL
                         >;
                 };
@@ -55,7 +65,7 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | CTL |
                         bindings = <
    &kp TAB   		&kp Q 			&kp W 			&kp E 			&kp R 			&kp T   		&kp Y 			&kp U  		&kp I     	&kp O   	&kp P    	&kp ESC
-   &bsdl 		&kp A 			&kp S 			&kp D 			&kp F 			&kp G   		&kp H 			&kp J  		&kp K     	&kp L   	&kp SEMI 	&kp SQT
+   &bsdl 			&kp A 			&kp S 			&kp D 			&kp F 			&kp G   		&kp H 			&kp J  		&kp K     	&kp L   	&kp SEMI 	&kp SQT
    &mt LSHFT CAPS 	&kp Z 			&kp X 			&kp C 			&kp V 			&kp B   		&kp N 			&kp M  		&kp COMMA 	&kp DOT 	&kp FSLH 	&mt RSHFT CAPS
 													&kp LGUI 		&mo 2 			&kp RET   		&kp SPACE 		&mo 3 		&kp LCTRL
                         >;
