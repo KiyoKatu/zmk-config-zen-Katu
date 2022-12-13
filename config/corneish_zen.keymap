@@ -22,8 +22,8 @@
 			, <&macro_tap &kp X>
 			, <&macro_release &kp LCTRL>;
 		)
-	}
-}
+	};
+};
 			
 / {
     behaviors {
