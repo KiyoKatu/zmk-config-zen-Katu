@@ -13,6 +13,17 @@
 #define QWERTY 	1
 #define NUMBER	2
 #define SYMBOL	3
+
+/{
+	macros {
+			ZMK_MACRO(mac_cut,
+			bindings
+			= <&macro_press &kp LCTRL>
+			, <&macro_tap &kp X>
+			, <&macro_release &kp LCTRL>;
+		)
+	}
+}
 			
 / {
     behaviors {
@@ -34,15 +45,7 @@
 			global-quick-tap;
 			bindings = <&kp>, <&kp>;
 		};
-		ZMK_MACRO(mac_cut,
-			wait-ms = <30>;
-			tap-ms = <40>;
-			bindings
-			= <&macro_press &kp LCTRL>
-			, <&macro_tap &kp X>
-			, <&macro_release &kp LCTRL>;
-		)
-		};
+	};
 };
 
 / {
