@@ -39,6 +39,7 @@
 			= <&macro_press &kp LCTRL>
 			, <&macro_tap &kp X>
 			, <&macro_release &kp LCTRL>
+		)
 		};
 };
 
