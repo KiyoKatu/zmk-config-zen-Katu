@@ -16,8 +16,10 @@
 
 /{
 	macros {
-			ZMK_MACRO(mac_cut,
+		ZMK_MACRO(mac_cut,
 			bindings
+			wait-ms = <40>;
+			tap-ms = <20>;
 			= <&macro_press &kp LCTRL>
 			, <&macro_tap &kp X>
 			, <&macro_release &kp LCTRL>;
