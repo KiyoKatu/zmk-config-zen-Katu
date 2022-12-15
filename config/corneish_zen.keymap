@@ -86,7 +86,7 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | CTL |
                         bindings = <
    &kp TAB   		&kp Q 			&kp W 			&kp F 			&kp P 			&kp G  			&kp J 			&kp L  		&kp U     	&kp Y   	&kp SEMI   	&kp ESC
-   &bsdl			&hm LGUI A		&hm LALT R		&hm LCTRL S		&hm LSHFT T		&kp D   		&kp H 			&hm RSHFT N &HM RCTRL E	&HM RALT I 	&HM RGUI O	&kp SQT
+   &bsdl			&hm LGUI A		&hm LALT R		&hm LCTRL S		&hm LSHFT T		&kp D   		&kp H 			&hm RSHFT N &hm RCTRL E	&hm RALT I 	&hm RGUI O	&kp SQT
    &mt LSHFT CAPS 	&kp Z 			AC(X)			AC(C)			AC(V)			&kp B   		&kp K 			&kp M  		&kp COMMA 	&kp DOT 	&kp FSLH 	&mt RSHFT CAPS
 													&kp LGUI 		&mo 2 			&kp RET   		&kp SPACE 		&mo 3 		&kp LCTRL
                         >;
