@@ -14,6 +14,8 @@
 #define NUMBER	2
 #define SYMBOL	3
 
+#define AC(keycode) &ac LC(keycode) keycode
+
 /{
 	macros {
 		ZMK_MACRO(mac_cut,
@@ -49,6 +51,25 @@
 			global-quick-tap;
 			bindings = <&kp>, <&kp>;
 		};
+		ac: Auto-control {
+			compatible = "zmk,behavior-hold-tap";
+			label = "AUTO_CTRL";
+			#binding-cells = <2>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <135>;
+			quick-tap-ms = <0>;
+			global-quick-tap;
+			bindings = <&kp>, <&kp>;
+		};
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
 	};
 };
 
@@ -65,8 +86,8 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | CTL |
                         bindings = <
    &kp TAB   		&kp Q 			&kp W 			&kp F 			&kp P 			&kp G  			&kp J 			&kp L  		&kp U     	&kp Y   	&kp SEMI   	&kp ESC
-   &bsdl			&kp A 			&kp R 			&kp S 			&kp T 			&kp D   		&kp H 			&kp N  		&kp E     	&kp I   	&kp O 		&kp SQT
-   &mt LSHFT CAPS 	&kp Z 			&gqt &mac_cut X	&gqt K_COPY	C	&gqt K_PASTE V	&kp B   		&kp K 			&kp M  		&kp COMMA 	&kp DOT 	&kp FSLH 	&mt RSHFT CAPS
+   &bsdl			&hm LGUI A		&hm LALT R		&hm LCTRL S		&hm LSHFT T		&kp D   		&kp H 			&hm RSHFT N &HM RCTRL E	&HM RALT I 	&HM RGUI O	&kp SQT
+   &mt LSHFT CAPS 	&kp Z 			AC(X)			AC(C)			AC(V)			&kp B   		&kp K 			&kp M  		&kp COMMA 	&kp DOT 	&kp FSLH 	&mt RSHFT CAPS
 													&kp LGUI 		&mo 2 			&kp RET   		&kp SPACE 		&mo 3 		&kp LCTRL
                         >;
                 };
