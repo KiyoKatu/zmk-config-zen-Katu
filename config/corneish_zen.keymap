@@ -70,7 +70,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <380>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -153,7 +153,7 @@
    &kp  TAB  		&trans		&trans 		&trans	 	&trans	 &trans	     		&trans		&trans	 	&kp UP 		&trans		&trans		&kp BSPC
    &kp LCTRL 		&trans   	&WTF 		&trans   	&trans   &trans      		&trans		&kp LEFT 	&kp DOWN        &kp RIGHT 	&trans		&kp GRAVE
    &kp LSHFT 		&trans   	&mac_cut 	&trans   	&trans   &trans      		&trans		&wrkl	  	&trans	        &wrkr 		&trans	 	&kp TILDE
-                					&kp LGUI 	&trans   &kp RET   		&kp SPACE      	&trans    	&kp trans
+                					&kp LGUI 	&trans   &kp RET   		&kp SPACE      	&trans    	&trans
                         >;
                 };
         };
